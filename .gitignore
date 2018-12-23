@@ -1,0 +1,4 @@
+.terraform/*
+compute/.terraform/*
+networking/.terraform/*
+storage/.terraform/*
