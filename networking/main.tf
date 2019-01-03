@@ -84,7 +84,7 @@ resource "aws_security_group" "tf_public_sg" {
       from_port = 22
       to_port = 22
       protocol = "tcp"
-      cidr_blocks = ["${var.localip}"] #if words are plural, in the TF world, much of the time it's a list
+      cidr_blocks = ["${var.access_ip}"] #if words are plural, in the TF world, much of the time it's a list
   }
 
    #HTTP -- inbound traffic
@@ -92,7 +92,7 @@ resource "aws_security_group" "tf_public_sg" {
       from_port = 80
       to_port = 80
       protocol = "tcp"
-      cidr_blocks = ["${var.localip}"]
+      cidr_blocks = ["${var.access_ip}"]
   }
 
   egress {
