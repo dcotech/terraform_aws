@@ -7,6 +7,6 @@ public_cidrs = [
 ]
 access_ip = "0.0.0.0/0"
 key_name = "tf_key"
-public_key_path = "/Users/damienoneal/.ssh/id_rsa.pub" #usually in your home folder, but your id_rsa.pub file can go anywhere
+public_key_path = "/your/public/key/goes/here/id_rsa.pub" #usually in your home folder, but your id_rsa.pub file can go anywhere
 server_instance_type = "t2.micro"
 instance_count = 2
