@@ -1,8 +1,22 @@
 #---compute/variables.tf----
-variable "key_name" {
-  default = "tfkey" #this name can be anything. This is just a placeholder
+variable "key_name" {}
+
+variable "public_key_path" {}
+
+variable "subnet_ips" {
+  type = "list"
 }
 
-variable "public_key_path" {
-  default = "/your/public/key/path/goes/here/id_rsa.pub" #usually in your home folder, but your id_rsa.pub file can go anywhere
-}
+variable "instance_count" {}
+
+variable "instance_type" {}
+
+variable "security_group" {}
+
+variable "subnets" {
+  type = "list"
+} #This is the AWS-specified ID of the subnets. This doesn't contain the IP addresses
+
+
+
+

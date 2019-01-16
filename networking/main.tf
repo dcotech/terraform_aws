@@ -44,7 +44,7 @@ resource "aws_route_table" "tf_public_rt" {
 
 #This is for the private route table. Unless explicitly associated with the public, AWS resources in the VPC will default to the private network
 resource "aws_default_route_table" "tf_private_rt" {
-    default_route_table_id = "${aws_vpc.tf_vpc.default_route_table_id.id}"
+    default_route_table_id = "${aws_vpc.tf_vpc.default_route_table_id}"
 
     tags {
         Name = "tf_private"
